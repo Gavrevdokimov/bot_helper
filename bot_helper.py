@@ -9,6 +9,8 @@ import json
 token = os.environ.get("BOT_TOKEN_2")
 bot = telebot.TeleBot(token)
 
+bot.send_message(325051402, "я запустился")
+
 # открываем сохраненную игру
 with open('save_askers.json') as f:
     try:
