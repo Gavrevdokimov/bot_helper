@@ -21,7 +21,6 @@ with open('save_askers.json') as f:
     except:
         askers = {}
 
-print(askers)
 
 
 sticker = 'CAACAgIAAxkBAAIPnV67u5l7uBx-N1IYtu70VgclQuO4AAIVAwACnNbnCgbnCWarj1O-GQQ'
@@ -150,7 +149,6 @@ def command_hadler(message):
 @bot.callback_query_handler(func=lambda message: True)
 def answer(message):
     global players
-    print(message.from_user.first_name, message.from_user.last_name, message.from_user.id, message.data)
     if message.data == 'just_call':
         bot.send_message(message.from_user.id, "Напишите свой номер телефона, и мы позвоним в ближайшее время.", reply_markup=keyboard_back())
         askers[message.from_user.id]["call"] = "yes"
@@ -234,6 +232,6 @@ def sticker_hadler(message):
     else:
         bot.send_message(message.from_user.id, "Извините, я не умею отвечать на вопросы. Если вы напишите свой номер телефона, наш менеджер позвонит и ответит на все вопросы.")
         askers[message.from_user.id]["call"] = "yes"
-    print(askers)
 
+                             
 bot.polling(timeout=60)
