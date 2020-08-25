@@ -6,8 +6,7 @@ import copy
 import json
 
 
-token = "1341060471:AAHUyDw0JPav8iMr74osyfM7Cl8UIy3PK3g" 
-#os.environ.get("BOT_TOKEN_2")
+token = os.environ.get("BOT_TOKEN")
 bot = telebot.TeleBot(token)
 
 bot.send_message(325051402, "я запустился")
