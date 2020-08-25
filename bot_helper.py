@@ -7,7 +7,6 @@ import json
 
 
 token = os.environ.get("BOT_TOKEN_2")
-    # "1341060471:AAHUyDw0JPav8iMr74osyfM7Cl8UIy3PK3g"
 bot = telebot.TeleBot(token)
 
 # открываем сохраненную игру
