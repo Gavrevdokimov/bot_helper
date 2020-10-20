@@ -4,9 +4,9 @@ import telebot
 from telebot import types
 import copy
 import json
+import os
 
-
-token = "1341060471:AAHUyDw0JPav8iMr74osyfM7Cl8UIy3PK3g"
+token = os.environ.get("BOT_TOKEN")
 bot = telebot.TeleBot(token)
 
 bot.send_message(325051402, "я запустился")
